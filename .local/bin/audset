@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Script to set audio output device on FreeBSD. 
+
+number=$(grep pcm /dev/sndstat | awk '{print $1}' | cut -d: -f1 | tr -d 'pcm' | dmenu -p "Output:")
+
+
+doas sysctl hw.snd.default_unit=$number
+pactl set-default-sink oss_output.dsp$number
+
+echo $number > $HOME/.config/audset_conf

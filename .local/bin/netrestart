@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#doas service netif restart && doas service routing restart
+#doas service netif restart wlan0; doas service routing restart; doas service dhclient restart wlan0; 
+
+doas service netif restart em0

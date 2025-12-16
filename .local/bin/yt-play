@@ -1,0 +1,7 @@
+#!/bin/sh
+
+notify-send "Playing: $(xclip -o)"
+url=$(xclip -o | sed 's|inv.nadeko.net|www.youtube.com|')
+
+yt-dlp --cookies $HOME/Doxs/Passwords/cookies.txt -o - $url | mpv --pause - &
+echo $(yt-dlp $url --skip-download --no-warning --get-title) - $url >> $HOME/.ythistory

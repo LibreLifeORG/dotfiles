@@ -1,0 +1,3 @@
+#!/bin/sh
+
+doas mount -t msdosfs /dev/da0s1 /mnt

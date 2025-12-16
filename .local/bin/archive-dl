@@ -1,0 +1,6 @@
+#!/bin/sh
+
+url=$1/
+type=$2
+
+curl -s "$url"  | grep $type | sed -E 's/.*href="([^"]+)".*/\1/' | awk -v url="$url" '{print url $0}' | xargs -I {} curl -LO {}

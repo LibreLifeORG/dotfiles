@@ -1,0 +1,14 @@
+#!/bin/sh
+
+filepick=$(find $HOME/pics | fzf)
+
+xclip -selection clipboard -t image/png -i $filepick
+
+# Swallow window.
+WinID=$(xdo id)
+xdo hide $WinID
+
+nsxiv -a "$filepick"
+
+# Show window.
+xdo show $WinID

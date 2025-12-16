@@ -1,0 +1,3 @@
+#!/bin/sh
+
+maim -i $(xdotool getactivewindow) ~/pics/screenshots/window_$(date +%s).png

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+number=$(xinput | grep -e "Logitech G502 HERO Gaming Mouse" | sed '1!d' | cut -d'=' -f2 | head -1 | awk '{print $1}')
+
+xinput set-prop $number 177 0.6 0 0 0 0.6 0 0 0 1

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+maim -u | feh -F - & maim -s -k ~/pics/screenshots/screenshot_$(date +%s).png && kill $!

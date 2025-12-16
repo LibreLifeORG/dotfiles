@@ -1,0 +1,3 @@
+#!/bin/sh
+
+yt-dlp --cookies $HOME/Doxs/Passwords/cookies.txt -t mp3 --external-downloader=aria2c --external-downloader-args '--min-split-size=1M --max-connection-per-server=16 --max-concurrent-downloads=16 --split=16' -o "%(channel)s - %(title)s - [%(id)s].%(ext)s" $(echo $1 | sed 's|inv.nadeko.net|www.youtube.com|')

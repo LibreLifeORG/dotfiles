@@ -1,0 +1,7 @@
+#/bin/yash
+
+ping -c 5 librelife.org || exit 1
+
+mbsync -a
+
+env GZIP=-9 tar cvzf $HOME/Doxs/Archives/Emails/email_$(date +'%m-%d-%y-%s').tgz $HOME/Doxs/Mail/

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+#url=$(cat)
+url=$1
+pick=$(printf "mpv\nlibrewolf\n" | dmenu -l 2)
+
+echo $url
+
+if [ $pick = 'mpv' ]; then
+	# Runs mpv
+	exec yt-dlp -o - $url | mpv --pause - &
+else
+
+	if [ $pick = 'librewolf' ]; then
+		# Runs LibreWolf
+		exec librewolf $url
+	else
+		echo "Error! No input" && exit 1
+	fi
+
+fi

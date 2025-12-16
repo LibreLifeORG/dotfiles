@@ -1,0 +1,12 @@
+#!/bin/sh
+
+filepick=$(find $HOME/vids -type f | fzf)
+
+# Swallow window.
+WinID=$(xdo id)
+xdo hide $WinID
+
+mpv "$filepick"
+
+# Show window.
+xdo show $WinID
