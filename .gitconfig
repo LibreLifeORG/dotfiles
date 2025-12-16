@@ -1,0 +1,15 @@
+[user]
+	email = me@librelife.org
+	name = Libre Life
+	signingkey = E179B99B4CD4049039216163B263FA6041CC2A78
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = master
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[http]
+	postBuffer = 524288000
