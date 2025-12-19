@@ -5,5 +5,6 @@ alias sxiv="swallow nsxiv"
 alias zathura="swallow zathura"
 alias pf="picfind"
 alias vf="vidfind"
+alias yf="youtubefind"
 alias engrampa="swallow engrampa"
 alias dotfiles='/usr/local/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'

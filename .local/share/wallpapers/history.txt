@@ -1,0 +1,2 @@
+paintings/christ.png
+paintings/trinity_college.jpg
