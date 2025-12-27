@@ -1,6 +1,6 @@
 #!/bin/sh
 
-filepick=$(find $HOME/vids/youtube -type f | fzf)
+filepick=$(find /media/data/youtube -type f | fzf)
 
 # Swallow window.
 WinID=$(xdo id)

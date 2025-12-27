@@ -9,7 +9,11 @@ HISTFILE=~/.histfile
 
 # Basic auto/tab complete:
 autoload -U compinit
-zstyle ':completion:*' menu select
+#zstyle ':completion:*' menu select
+zstyle -e ':completion:*:hosts' hosts 'reply=(
+  ${=${${(f)"$(cat ~/.ssh/config 2>/dev/null)"}:#Host *}#Host }
+  ${=${${(f)"$(cat ~/.ssh/known_hosts ~/.ssh/known_hosts2 /etc/ssh/ssh_known_hosts 2>/dev/null)"}%%[# ]*}//,/ }
+)'
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
 
@@ -55,7 +59,7 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^o' 'lfcd\n'
+bindkey -s '^o' 'ranger\n'
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

@@ -36,5 +36,10 @@ set termguicolors
 let ayucolor="dark"
 colorscheme ayu
 
+"I beam
+let &t_SI = "\<Esc>[6 q" 
+let &t_EI = "\<Esc>[2 q"
+let &t_SR = "\<Esc>[4 q"
+
 " Vim Wiki
 let g:vimwiki_list = [{ 'path': '~/doxs/vimwiki/'}]

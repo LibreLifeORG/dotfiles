@@ -1,7 +1,8 @@
 [user]
 	email = me@librelife.org
 	name = Libre Life
-	signingkey = E179B99B4CD4049039216163B263FA6041CC2A78
+	#signingkey = E179B99B4CD4049039216163B263FA6041CC2A78
+	signingkey = 9D2342D0989FDCCB8C513B69C4C85FB4DF91E44F
 [commit]
 	gpgsign = true
 [init]

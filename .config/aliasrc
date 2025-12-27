@@ -3,8 +3,10 @@ alias yt="inv-dlp"
 alias mpv="swallow mpv"
 alias sxiv="swallow nsxiv"
 alias zathura="swallow zathura"
+alias gpg="gpg2"
 alias pf="picfind"
 alias vf="vidfind"
 alias yf="youtubefind"
 alias engrampa="swallow engrampa"
 alias dotfiles='/usr/local/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias ranger='ranger --choosedir=$HOME/.rangerdir; [ -f $HOME/.rangerdir ] && cd "$(cat $HOME/.rangerdir)"'
